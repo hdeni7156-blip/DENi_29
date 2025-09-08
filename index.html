@@ -1,0 +1,319 @@
+<html lang="id">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Makanan Tradisional Nusantara
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+      font-family: 'Poppins', sans-serif;
+    }
+    /* Animations */
+    .fade-in-up {
+      opacity: 0;
+      transform: translateY(20px);
+      animation-fill-mode: forwards;
+      animation-name: fadeInUp;
+      animation-duration: 1s;
+      animation-timing-function: ease-out;
+    }
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .pulse-icon {
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0%, 100% {
+        transform: scale(1);
+        color: #f59e0b;
+      }
+      50% {
+        transform: scale(1.2);
+        color: #d97706;
+      }
+    }
+    /* Smooth scroll */
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+ </head>
+ <body class="bg-gradient-to-b from-yellow-50 via-yellow-100 to-yellow-50 min-h-screen flex flex-col">
+  <!-- Navbar -->
+  <nav class="bg-yellow-400 shadow-md sticky top-0 z-50">
+   <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+    <a class="text-white text-2xl font-bold flex items-center space-x-2 hover:text-yellow-200 transition" href="#home">
+     <i class="fas fa-utensils pulse-icon">
+     </i>
+     <span>
+      Makanan Tradisional
+     </span>
+    </a>
+    <ul class="hidden md:flex space-x-8 text-yellow-100 font-semibold">
+     <li>
+      <a class="hover:text-yellow-200 transition" href="#home">
+       Beranda
+      </a>
+     </li>
+     <li>
+      <a class="hover:text-yellow-200 transition" href="#menu">
+       Menu
+      </a>
+     </li>
+     <li>
+      <a class="hover:text-yellow-200 transition" href="#gallery">
+       Galeri Sejarah
+      </a>
+     </li>
+     <li>
+      <a class="hover:text-yellow-200 transition" href="#about">
+       Tentang
+      </a>
+     </li>
+    </ul>
+    <button class="md:hidden text-yellow-100 focus:outline-none" id="mobile-menu-button">
+     <i class="fas fa-bars fa-2x">
+     </i>
+    </button>
+   </div>
+   <div class="hidden md:hidden bg-yellow-300" id="mobile-menu">
+    <ul class="flex flex-col p-4 space-y-3 text-yellow-900 font-semibold">
+     <li>
+      <a class="block hover:text-yellow-700 transition" href="#home">
+       Beranda
+      </a>
+     </li>
+     <li>
+      <a class="block hover:text-yellow-700 transition" href="#menu">
+       Menu
+      </a>
+     </li>
+     <li>
+      <a class="block hover:text-yellow-700 transition" href="#gallery">
+       Galeri Sejarah
+      </a>
+     </li>
+     <li>
+      <a class="block hover:text-yellow-700 transition" href="#about">
+       Tentang
+      </a>
+     </li>
+    </ul>
+   </div>
+  </nav>
+  <!-- Hero Section -->
+  <section class="flex-grow flex flex-col justify-center items-center text-center px-6 py-20 bg-yellow-100 relative overflow-hidden" id="home">
+   <img alt="Piring berisi berbagai makanan tradisional Indonesia yang berwarna-warni dan menggugah selera, di atas meja kayu dengan latar belakang kain batik" class="rounded-lg shadow-lg mx-auto mb-8 max-w-full w-96 fade-in-up" height="400" src="https://storage.googleapis.com/a1aa/image/79f2ad74-464b-4986-6ec4-b4dcaec147cb.jpg" style="animation-delay: 0.3s" width="600"/>
+   <h1 class="text-4xl md:text-5xl font-extrabold text-yellow-900 mb-4 fade-in-up" style="animation-delay: 0.6s">
+    Selamat Datang di
+    <span class="text-yellow-600">
+     Makanan Tradisional Nusantara
+    </span>
+   </h1>
+   <p class="max-w-xl text-yellow-800 text-lg md:text-xl fade-in-up" style="animation-delay: 0.9s">
+    Menyelami kekayaan cita rasa dan sejarah makanan tradisional Indonesia yang autentik dan penuh cerita.
+   </p>
+   <a class="mt-8 inline-block bg-yellow-500 hover:bg-yellow-600 text-white font-semibold py-3 px-8 rounded-lg shadow-lg transition transform hover:scale-105 fade-in-up" href="#menu" style="animation-delay: 1.2s">
+    Jelajahi Menu
+   </a>
+   <svg class="absolute bottom-0 left-0 w-full h-24 text-yellow-300" fill="currentColor" preserveaspectratio="none" viewbox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0,224L48,197.3C96,171,192,117,288,117.3C384,117,480,171,576,197.3C672,224,768,224,864,197.3C960,171,1056,117,1152,117.3C1248,117,1344,171,1392,197.3L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z" fill-opacity="0.3">
+    </path>
+   </svg>
+  </section>
+  <!-- Menu Section -->
+  <section class="bg-yellow-50 py-16 px-6 max-w-7xl mx-auto" id="menu">
+   <h2 class="text-3xl md:text-4xl font-bold text-yellow-900 text-center mb-12 fade-in-up" style="animation-delay: 0.2s">
+    Menu Makanan Tradisional
+   </h2>
+   <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
+    <article class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition duration-300 fade-in-up" style="animation-delay: 0.3s">
+     <img alt="Sepiring rendang Padang, daging sapi empuk berbalut bumbu rempah khas berwarna coklat gelap, disajikan dengan daun pisang" class="w-full h-48 object-cover" height="300" src="https://storage.googleapis.com/a1aa/image/9546d37f-ab3b-41cb-dbc1-854a54af0609.jpg" width="400"/>
+     <div class="p-6">
+      <h3 class="text-xl font-semibold text-yellow-800 mb-2">
+       Rendang Padang
+      </h3>
+      <p class="text-yellow-700 text-sm">
+       Masakan daging sapi yang dimasak dengan santan dan rempah-rempah khas Minangkabau hingga kering dan kaya rasa.
+      </p>
+     </div>
+    </article>
+    <article class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition duration-300 fade-in-up" style="animation-delay: 0.4s">
+     <img alt="Sepiring gudeg Yogyakarta, nangka muda dimasak dengan santan berwarna coklat kemerahan, disajikan dengan telur rebus dan sambal krecek" class="w-full h-48 object-cover" height="300" src="https://storage.googleapis.com/a1aa/image/2a95c657-3d65-4dcd-b062-e143f703287e.jpg" width="400"/>
+     <div class="p-6">
+      <h3 class="text-xl font-semibold text-yellow-800 mb-2">
+       Gudeg Yogyakarta
+      </h3>
+      <p class="text-yellow-700 text-sm">
+       Nangka muda dimasak dengan santan dan gula merah, disajikan dengan telur, ayam, dan sambal krecek yang pedas.
+      </p>
+     </div>
+    </article>
+    <article class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition duration-300 fade-in-up" style="animation-delay: 0.5s">
+     <img alt="Piring berisi pempek Palembang, adonan ikan yang digoreng dan direbus, disajikan dengan kuah cuka berwarna coklat dan irisan timun" class="w-full h-48 object-cover" height="300" src="https://storage.googleapis.com/a1aa/image/52a7ae3a-d140-4d27-9a62-c5ab8b4461fc.jpg" width="400"/>
+     <div class="p-6">
+      <h3 class="text-xl font-semibold text-yellow-800 mb-2">
+       Pempek Palembang
+      </h3>
+      <p class="text-yellow-700 text-sm">
+       Makanan berbahan dasar ikan yang digoreng dan direbus, disajikan dengan kuah cuka asam manis pedas khas Palembang.
+      </p>
+     </div>
+    </article>
+    <article class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition duration-300 fade-in-up" style="animation-delay: 0.6s">
+     <img alt="Tusukan sate Madura yang dibakar dengan bumbu kacang kental berwarna coklat kemerahan, disajikan dengan lontong dan irisan bawang merah" class="w-full h-48 object-cover" height="300" src="https://storage.googleapis.com/a1aa/image/60635013-4ccc-4535-dd94-f867e776b59c.jpg" width="400"/>
+     <div class="p-6">
+      <h3 class="text-xl font-semibold text-yellow-800 mb-2">
+       Sate Madura
+      </h3>
+      <p class="text-yellow-700 text-sm">
+       Daging yang ditusuk dan dibakar, disajikan dengan bumbu kacang kental dan lontong khas Madura.
+      </p>
+     </div>
+    </article>
+    <article class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition duration-300 fade-in-up" style="animation-delay: 0.7s">
+     <img alt="Piring gado-gado Jakarta, sayuran rebus segar disiram saus kacang kental berwarna coklat muda, dihiasi kerupuk dan telur rebus" class="w-full h-48 object-cover" height="300" src="https://storage.googleapis.com/a1aa/image/3010a7f3-bf49-4a81-4530-16e8b0033528.jpg" width="400"/>
+     <div class="p-6">
+      <h3 class="text-xl font-semibold text-yellow-800 mb-2">
+       Gado-Gado Jakarta
+      </h3>
+      <p class="text-yellow-700 text-sm">
+       Salad sayuran rebus dengan saus kacang kental, dilengkapi kerupuk dan telur rebus sebagai pelengkap.
+      </p>
+     </div>
+    </article>
+    <article class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition duration-300 fade-in-up" style="animation-delay: 0.8s">
+     <img alt="Mangkok berisi bakso Malang dengan kuah bening, bakso daging sapi, tahu goreng, mie kuning, dan sayuran hijau" class="w-full h-48 object-cover" height="300" src="https://storage.googleapis.com/a1aa/image/847353d7-df34-4505-80b9-03553df0d778.jpg" width="400"/>
+     <div class="p-6">
+      <h3 class="text-xl font-semibold text-yellow-800 mb-2">
+       Bakso Malang
+      </h3>
+      <p class="text-yellow-700 text-sm">
+       Sup bakso daging sapi dengan tambahan tahu goreng, mie kuning, dan sayuran hijau segar.
+      </p>
+     </div>
+    </article>
+   </div>
+  </section>
+  <!-- Gallery Section -->
+  <section class="bg-yellow-100 py-16 px-6 max-w-7xl mx-auto" id="gallery">
+   <h2 class="text-3xl md:text-4xl font-bold text-yellow-900 text-center mb-12 fade-in-up" style="animation-delay: 0.2s">
+    Galeri Sejarah Makanan Tradisional
+   </h2>
+   <p class="max-w-3xl mx-auto text-yellow-800 text-center mb-12 fade-in-up" style="animation-delay: 0.4s">
+    Menelusuri perjalanan dan cerita di balik makanan tradisional Indonesia yang kaya akan budaya dan tradisi.
+   </p>
+   <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+    <figure class="bg-white rounded-lg shadow-lg overflow-hidden fade-in-up" style="animation-delay: 0.5s">
+     <img alt="Ilustrasi sejarah rendang Padang, gambar tangan memasak rendang di atas tungku tradisional dengan rempah-rempah di sekitar" class="w-full h-48 object-cover" height="300" src="https://storage.googleapis.com/a1aa/image/192ea9cb-3668-47cf-ca40-f1c68147e370.jpg" width="400"/>
+     <figcaption class="p-4 text-yellow-700 text-sm">
+      Rendang berasal dari Minangkabau, dimasak secara tradisional dengan rempah-rempah dan santan selama berjam-jam.
+     </figcaption>
+    </figure>
+    <figure class="bg-white rounded-lg shadow-lg overflow-hidden fade-in-up" style="animation-delay: 0.6s">
+     <img alt="Gambar sejarah gudeg Yogyakarta, ilustrasi pasar tradisional dan proses memasak gudeg dengan panci besar" class="w-full h-48 object-cover" height="300" src="https://storage.googleapis.com/a1aa/image/948f3f6c-d3a3-4dd2-cc59-35932eaa954a.jpg" width="400"/>
+     <figcaption class="p-4 text-yellow-700 text-sm">
+      Gudeg merupakan makanan khas Yogyakarta yang dibuat dari nangka muda dimasak dengan santan dan gula merah.
+     </figcaption>
+    </figure>
+    <figure class="bg-white rounded-lg shadow-lg overflow-hidden fade-in-up" style="animation-delay: 0.7s">
+     <img alt="Ilustrasi sejarah pempek Palembang, gambar sungai Musi dan pembuatan pempek dengan tangan di dapur tradisional" class="w-full h-48 object-cover" height="300" src="https://storage.googleapis.com/a1aa/image/2e3c6ecb-fc88-43d8-f6e3-47e5969c9362.jpg" width="400"/>
+     <figcaption class="p-4 text-yellow-700 text-sm">
+      Pempek adalah makanan khas Palembang yang terbuat dari ikan dan sagu, disajikan dengan kuah cuka khas.
+     </figcaption>
+    </figure>
+    <figure class="bg-white rounded-lg shadow-lg overflow-hidden fade-in-up" style="animation-delay: 0.8s">
+     <img alt="Gambar sejarah sate Madura, ilustrasi pasar malam dengan penjual sate membakar tusukan sate di atas arang" class="w-full h-48 object-cover" height="300" src="https://storage.googleapis.com/a1aa/image/36cb1561-84a5-4b72-9228-a4de1aed3881.jpg" width="400"/>
+     <figcaption class="p-4 text-yellow-700 text-sm">
+      Sate Madura terkenal dengan bumbu kacang khas dan cara pembakaran yang menghasilkan aroma menggoda.
+     </figcaption>
+    </figure>
+    <figure class="bg-white rounded-lg shadow-lg overflow-hidden fade-in-up" style="animation-delay: 0.9s">
+     <img alt="Ilustrasi sejarah gado-gado Jakarta, gambar pasar tradisional dan sayuran segar yang disiapkan untuk gado-gado" class="w-full h-48 object-cover" height="300" src="https://storage.googleapis.com/a1aa/image/edf8ad74-b49a-4f3d-e7d6-a27879acdeee.jpg" width="400"/>
+     <figcaption class="p-4 text-yellow-700 text-sm">
+      Gado-gado merupakan salad sayuran dengan saus kacang yang menjadi favorit di Jakarta dan sekitarnya.
+     </figcaption>
+    </figure>
+    <figure class="bg-white rounded-lg shadow-lg overflow-hidden fade-in-up" style="animation-delay: 1s">
+     <img alt="Gambar sejarah bakso Malang, ilustrasi pedagang bakso dengan gerobak dan mangkok berisi bakso lengkap" class="w-full h-48 object-cover" height="300" src="https://storage.googleapis.com/a1aa/image/c681bcc0-8ff1-4552-4ef1-db33b0b8650a.jpg" width="400"/>
+     <figcaption class="p-4 text-yellow-700 text-sm">
+      Bakso Malang terkenal dengan kuah bening dan pelengkap seperti tahu goreng, mie, dan sayuran segar.
+     </figcaption>
+    </figure>
+   </div>
+  </section>
+  <!-- About Section -->
+  <section class="bg-yellow-50 py-16 px-6 max-w-4xl mx-auto text-center fade-in-up" id="about" style="animation-delay: 0.3s">
+   <h2 class="text-3xl font-bold text-yellow-900 mb-6">
+    Tentang Kami
+   </h2>
+   <p class="text-yellow-800 text-lg leading-relaxed">
+    Website ini dibuat untuk melestarikan dan memperkenalkan kekayaan kuliner tradisional Indonesia kepada generasi muda dan dunia. Kami percaya bahwa setiap makanan tradisional memiliki cerita dan nilai budaya yang penting untuk dijaga dan dibagikan.
+   </p>
+  </section>
+  <!-- Footer -->
+  <footer class="bg-yellow-400 text-yellow-900 py-6 mt-auto">
+   <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+    <p class="text-sm">
+     © 2024 Makanan Tradisional Nusantara. Semua hak cipta dilindungi.
+    </p>
+    <div class="flex space-x-6 text-yellow-900">
+     <a aria-label="Facebook" class="hover:text-yellow-700 transition" href="https://www.facebook.com" rel="noopener" target="_blank">
+      <i class="fab fa-facebook fa-lg">
+      </i>
+     </a>
+     <a aria-label="Twitter" class="hover:text-yellow-700 transition" href="https://www.twitter.com" rel="noopener" target="_blank">
+      <i class="fab fa-twitter fa-lg">
+      </i>
+     </a>
+     <a aria-label="Instagram" class="hover:text-yellow-700 transition" href="https://www.instagram.com" rel="noopener" target="_blank">
+      <i class="fab fa-instagram fa-lg">
+      </i>
+     </a>
+    </div>
+   </div>
+  </footer>
+  <script>
+   // Mobile menu toggle
+    const btn = document.getElementById('mobile-menu-button');
+    const menu = document.getElementById('mobile-menu');
+
+    btn.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+
+    // Animate fade-in-up on scroll
+    const faders = document.querySelectorAll('.fade-in-up');
+
+    const appearOptions = {
+      threshold: 0.1,
+      rootMargin: "0px 0px -50px 0px"
+    };
+
+    const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) {
+          return;
+        } else {
+          entry.target.style.animationPlayState = 'running';
+          appearOnScroll.unobserve(entry.target);
+        }
+      });
+    }, appearOptions);
+
+    faders.forEach(fader => {
+      fader.style.animationPlayState = 'paused';
+      appearOnScroll.observe(fader);
+    });
+  </script>
+ </body>
+</html>
